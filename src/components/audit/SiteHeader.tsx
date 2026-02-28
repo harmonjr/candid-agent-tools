@@ -7,6 +7,8 @@ const NAV_LINKS = [
   { href: '/audit', label: 'Margin Audit' },
   { href: '/enough', label: 'Enough' },
   { href: '/true-cost', label: 'True Cost' },
+  { href: '/expectations', label: 'Expectations' },
+  { href: '/board', label: 'Board' },
   { href: '/boundaries', label: 'Boundaries' },
   { href: '/conversations', label: 'Conversations' },
   { href: '/templates', label: 'Templates' },

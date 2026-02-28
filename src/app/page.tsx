@@ -28,6 +28,22 @@ const TOOLS = [
     cta: 'Calculate True Cost',
   },
   {
+    href: '/expectations',
+    label: 'Free Guide',
+    title: 'Client Expectation Setter',
+    description:
+      'A first-meeting conversation guide that establishes trust and boundaries upfront. The Bob Method discovery questions, boundary scripts, and pushback responses — customizable to your voice.',
+    cta: 'Prepare for the First Meeting',
+  },
+  {
+    href: '/board',
+    label: 'Free CRM',
+    title: 'The Candid Board',
+    description:
+      'A radically simple Kanban CRM for agents who serve fewer clients better. Five stages, life context over lead scores, and a margin indicator that tells the truth about your capacity.',
+    cta: 'Open Your Board',
+  },
+  {
     href: '/boundaries',
     label: 'Free Tool',
     title: 'Communication Hours Template',
