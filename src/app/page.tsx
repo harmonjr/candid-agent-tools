@@ -12,6 +12,22 @@ const TOOLS = [
     cta: 'Take the Audit',
   },
   {
+    href: '/enough',
+    label: 'Free Calculator',
+    title: 'The Enough Calculator',
+    description:
+      'Reverse-engineer how many closings you actually need per year — starting with the life you want to live, not the income you chase. Most agents are surprised by the number.',
+    cta: 'Find My Number',
+  },
+  {
+    href: '/true-cost',
+    label: 'Free Calculator',
+    title: 'The True Cost Calculator',
+    description:
+      'Show buyers what a home really costs each month — far beyond the mortgage payment. Maintenance, utilities, commute changes, and the margin check that matters most.',
+    cta: 'Calculate True Cost',
+  },
+  {
     href: '/boundaries',
     label: 'Free Tool',
     title: 'Communication Hours Template',
