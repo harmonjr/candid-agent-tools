@@ -24,6 +24,18 @@ export default function SiteHeader() {
           >
             Boundaries
           </Link>
+          <Link
+            href="/conversations"
+            className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid transition-colors duration-200 hover:text-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          >
+            Conversations
+          </Link>
+          <Link
+            href="/templates"
+            className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid transition-colors duration-200 hover:text-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          >
+            Templates
+          </Link>
         </nav>
       </div>
     </header>

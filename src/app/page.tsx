@@ -19,6 +19,22 @@ const TOOLS = [
       'Define your working hours, generate professional auto-responders, and get scripts for setting client expectations from day one. Because the best agents protect their energy.',
     cta: 'Build My Boundaries',
   },
+  {
+    href: '/conversations',
+    label: 'Free Framework',
+    title: 'The Margin Message Framework',
+    description:
+      'Scripts and frameworks for the hard conversations — about budgets, true costs, and honest advice. The Bob Method, packaged for agents who put people before transactions.',
+    cta: 'Browse the Scripts',
+  },
+  {
+    href: '/templates',
+    label: 'Free Library',
+    title: 'Content Templates',
+    description:
+      'Pre-structured templates for market updates, buyer education, newsletters, and more. Copy, customize for your market, and publish content that builds trust.',
+    cta: 'Browse Templates',
+  },
 ];
 
 export default function Home() {
