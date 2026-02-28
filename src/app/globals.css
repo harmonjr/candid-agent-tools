@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Brand Colors */
+  --color-cream: #FDFBF7;
+  --color-cream-alt: #EDE8DE;
+  --color-ink: #2C2825;
+  --color-ink-muted: #6B635B;
+  --color-candid: #B8652A;
+  --color-accent: #8B5A2B;
+  --color-accent-hover: #6B4423;
+  --color-border: #E5DFD5;
+  --color-highlight: #FEF3E2;
+
+  /* Score Zone Colors */
+  --color-zone-green: #4A7C59;
+  --color-zone-amber: #C4913B;
+  --color-zone-red: #C65D4A;
+
+  /* Spacing Scale */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Custom range slider styling */
+.slider-candid {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--color-border);
+  outline: none;
+}
+
+.slider-candid::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid var(--color-cream);
+  transition: background-color 0.2s ease-out;
+}
+
+.slider-candid::-webkit-slider-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+.slider-candid::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid var(--color-cream);
+  border-radius: 0;
+}
+
+.slider-candid:focus {
+  outline: none;
+}
+
+.slider-candid:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.2);
+}
+
+/* Print styles for results */
+@media print {
+  body { background: white !important; }
+  header, footer, button { display: none !important; }
+}
