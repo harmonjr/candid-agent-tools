@@ -11,12 +11,18 @@ export default function SiteHeader() {
           The Candid Agent
         </Link>
 
-        <nav>
+        <nav className="flex items-center gap-6">
           <Link
             href="/audit"
             className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid transition-colors duration-200 hover:text-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           >
             Margin Audit
+          </Link>
+          <Link
+            href="/boundaries"
+            className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid transition-colors duration-200 hover:text-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          >
+            Boundaries
           </Link>
         </nav>
       </div>
