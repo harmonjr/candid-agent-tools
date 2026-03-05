@@ -20,7 +20,7 @@ export default function EnoughResults({
   const reflection = getReflectionText(zone);
 
   return (
-    <div className="print:bg-white">
+    <div>
       <ResultsHeader transactions={result.withJosephReserve} />
 
       <MathBreakdown result={result} />
@@ -35,14 +35,14 @@ export default function EnoughResults({
         <button
           type="button"
           onClick={() => window.print()}
-          className="border border-border bg-white px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="border border-border bg-cream px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Print / Save Results
         </button>
         <button
           type="button"
           onClick={onRetake}
-          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Recalculate
         </button>
@@ -123,7 +123,7 @@ function ReflectionCard({
 
   return (
     <div
-      className={`mt-8 border-t-2 ${borderColor} bg-white px-6 py-8 sm:px-8`}
+      className={`mt-8 border-t-2 ${borderColor} bg-cream-alt px-6 py-8 sm:px-8`}
     >
       <h3 className="font-serif text-xl font-light text-ink">
         A Candid Reflection
@@ -137,7 +137,7 @@ function ReflectionCard({
 
 function NextStepsCta() {
   return (
-    <div className="mt-8 border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+    <div className="mt-8 border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
       <h3 className="font-serif text-xl font-light text-ink">
         Now you know the number.
       </h3>
@@ -152,7 +152,7 @@ function NextStepsCta() {
         href="https://thecandidagent.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-block bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+        className="mt-4 inline-block bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
       >
         Explore The Candid Agent
       </a>

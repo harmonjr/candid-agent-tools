@@ -40,7 +40,7 @@ export default function TimePickerRow({
           <select
             value={schedule.start}
             onChange={(e) => onTimeChange(dayKey, 'start', e.target.value)}
-            className="flex-1 border border-border bg-white px-2 py-2 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-3"
+            className="flex-1 border border-border bg-cream px-2 py-2 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-3"
             aria-label={`${dayLabel} start time`}
           >
             {TIME_OPTIONS.map((t) => (
@@ -51,7 +51,7 @@ export default function TimePickerRow({
           <select
             value={schedule.end}
             onChange={(e) => onTimeChange(dayKey, 'end', e.target.value)}
-            className="flex-1 border border-border bg-white px-2 py-2 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-3"
+            className="flex-1 border border-border bg-cream px-2 py-2 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-3"
             aria-label={`${dayLabel} end time`}
           >
             {TIME_OPTIONS.map((t) => (

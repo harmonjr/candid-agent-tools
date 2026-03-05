@@ -64,7 +64,7 @@ export default function ScheduleBuilder({
 
       <PresetSelector activePreset={activePreset} onSelect={handlePreset} />
 
-      <div className="mt-8 border-t-2 border-candid bg-white">
+      <div className="mt-8 border-t-2 border-candid bg-cream-alt">
         <div className="px-4 py-3 sm:px-6">
           <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
             Weekly Schedule
@@ -88,7 +88,7 @@ export default function ScheduleBuilder({
         <button
           type="button"
           onClick={onGenerate}
-          className="bg-accent px-8 py-4 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="bg-accent px-8 py-4 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Generate My Templates
         </button>
@@ -114,7 +114,7 @@ function PresetSelector({
           className={`border px-5 py-4 text-left transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-accent/20 ${
             activePreset === preset.key
               ? 'border-candid bg-highlight'
-              : 'border-border bg-white hover:border-accent'
+              : 'border-border bg-cream hover:border-accent'
           }`}
         >
           <span className="block font-sans text-sm font-semibold text-ink">
@@ -138,14 +138,14 @@ function ResponseSettings({
 }) {
   return (
     <div className="mt-8 space-y-6">
-      <div className="border-t-2 border-candid bg-white px-6 py-6">
+      <div className="border-t-2 border-candid bg-cream-alt px-6 py-6">
         <label className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
           Response Time During Working Hours
         </label>
         <select
           value={config.responseTime}
           onChange={(e) => onConfigChange({ ...config, responseTime: Number(e.target.value) })}
-          className="mt-3 w-full border border-border bg-white px-4 py-3 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="mt-3 w-full border border-border bg-cream px-4 py-3 font-sans text-sm text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           {RESPONSE_TIME_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -153,7 +153,7 @@ function ResponseSettings({
         </select>
       </div>
 
-      <div className="border-t-2 border-candid bg-white px-6 py-6">
+      <div className="border-t-2 border-candid bg-cream-alt px-6 py-6">
         <label className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
           Emergency Contact Method
         </label>
@@ -164,7 +164,7 @@ function ResponseSettings({
               className={`flex cursor-pointer items-center gap-3 border px-4 py-3 font-sans text-sm transition-colors duration-200 ${
                 config.emergencyMethod === method.value
                   ? 'border-candid bg-highlight text-ink'
-                  : 'border-border bg-white text-ink-muted hover:border-accent hover:text-ink'
+                  : 'border-border bg-cream text-ink-muted hover:border-accent hover:text-ink'
               } focus-within:ring-2 focus-within:ring-accent/20`}
             >
               <input
@@ -185,7 +185,7 @@ function ResponseSettings({
             value={config.customEmergency}
             onChange={(e) => onConfigChange({ ...config, customEmergency: e.target.value })}
             placeholder="Describe your emergency contact method..."
-            className="mt-3 w-full border border-border bg-white px-4 py-3 font-sans text-sm text-ink placeholder:text-ink-muted/50 transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+            className="mt-3 w-full border border-border bg-cream px-4 py-3 font-sans text-sm text-ink placeholder:text-ink-muted/50 transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           />
         )}
       </div>

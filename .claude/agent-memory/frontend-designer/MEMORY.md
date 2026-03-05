@@ -21,6 +21,10 @@
 - Question data in `src/lib/audit-questions.ts` (data-only, no UI)
 - Scoring logic in `src/lib/scoring.ts` (pure functions)
 - Wizard state in `AuditWizard.tsx` using useState/useCallback
+- Conversations tool: `src/components/conversations/` + `src/lib/conversations/` (split by category)
+- Expectations tool: `src/components/expectations/` + `src/lib/expectations/` (split by section)
+- Pattern: data split into individual files per section/category, barrel-exported via index.ts
+- agent_usage table uses `agent_name` column (NOT `agent_type`) and `outcome` (NOT `status`)
 
 ## Scoring Weights
 - Financial: 40%, Time: 35%, Client Load: 25%

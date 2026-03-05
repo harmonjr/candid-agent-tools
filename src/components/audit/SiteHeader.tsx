@@ -15,7 +15,7 @@ const NAV_LINKS = [
 ] as const;
 
 const LINK_CLASS =
-  'font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid transition-colors duration-200 hover:text-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20';
+  'font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-muted transition-colors duration-200 hover:text-candid focus:outline-hidden focus:ring-2 focus:ring-accent/20';
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,15 +36,15 @@ export default function SiteHeader() {
 
   return (
     <header ref={headerRef} className="border-b border-border bg-cream">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-8 lg:px-16">
         <Link
           href="/"
-          className="font-serif text-xl font-light text-ink transition-colors duration-200 hover:text-candid focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="group font-serif text-[20px] font-light tracking-[0.15em] text-ink transition-colors duration-200 hover:text-candid focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
-          The Candid Agent
+          THE <span className="text-candid transition-colors duration-200 group-hover:text-accent-hover">CANDID</span> AGENT
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link key={link.href} href={link.href} className={LINK_CLASS}>
               {link.label}
@@ -52,30 +52,53 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="flex flex-col justify-center gap-[5px] p-2 lg:hidden focus:outline-hidden focus:ring-2 focus:ring-accent/20 transition-colors duration-200"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-        >
-          <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
-          <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
-        </button>
+        <HamburgerButton menuOpen={menuOpen} onToggle={() => setMenuOpen((prev) => !prev)} />
       </div>
 
-      <nav
-        className={`overflow-hidden border-t border-border bg-cream transition-[max-height] duration-300 ease-out lg:hidden ${menuOpen ? 'max-h-96' : 'max-h-0 border-t-0'}`}
-      >
-        <div className="mx-auto flex max-w-5xl flex-col px-6 py-2">
-          {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} onClick={closeMenu} className={`${LINK_CLASS} block py-3`}>
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      <MobileMenu menuOpen={menuOpen} onClose={closeMenu} />
     </header>
+  );
+}
+
+interface HamburgerButtonProps {
+  menuOpen: boolean;
+  onToggle: () => void;
+}
+
+function HamburgerButton({ menuOpen, onToggle }: HamburgerButtonProps) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      className="flex flex-col justify-center gap-[5px] p-2 transition-colors duration-200 lg:hidden focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+      aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+      aria-expanded={menuOpen}
+    >
+      <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
+      <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
+      <span className={`block h-[2px] w-5 bg-ink transition-all duration-200 ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
+    </button>
+  );
+}
+
+interface MobileMenuProps {
+  menuOpen: boolean;
+  onClose: () => void;
+}
+
+function MobileMenu({ menuOpen, onClose }: MobileMenuProps) {
+  return (
+    <nav
+      aria-label="Mobile navigation"
+      className={`overflow-hidden border-t border-border bg-cream transition-all duration-300 ease-out lg:hidden ${menuOpen ? 'max-h-96' : 'max-h-0 border-t-0'}`}
+    >
+      <div className="mx-auto flex max-w-6xl flex-col px-6 py-2 sm:px-8">
+        {NAV_LINKS.map((link) => (
+          <Link key={link.href} href={link.href} onClick={onClose} className={`${LINK_CLASS} block py-3`}>
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </nav>
   );
 }

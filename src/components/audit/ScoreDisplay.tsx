@@ -33,7 +33,7 @@ export default function ScoreDisplay({
       <div
         className={`
           inline-flex flex-col items-center justify-center
-          border-2 ${colors.border} rounded-none
+          border-2 ${colors.border}
           ${isLarge ? 'h-40 w-40 sm:h-48 sm:w-48' : 'h-28 w-28'}
         `}
       >
@@ -53,9 +53,9 @@ export default function ScoreDisplay({
       <div className="mt-4">
         <span
           className={`
-            inline-block rounded-none px-3 py-1
+            inline-block px-3 py-1
             font-sans text-xs font-semibold uppercase tracking-[0.15em]
-            ${colors.bg} text-white
+            ${colors.bg} text-cream
           `}
         >
           {ZONE_LABELS[zone]}

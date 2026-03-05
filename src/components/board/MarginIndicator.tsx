@@ -25,7 +25,7 @@ export default function MarginIndicator({
   const fillPercent = capacity > 0 ? Math.min((active / capacity) * 100, 100) : 0;
 
   return (
-    <div className="border-b border-border bg-white px-6 py-4">
+    <div className="border-b border-border bg-cream px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center gap-6">
         <div className="flex-1">
           <div className="flex items-baseline justify-between">

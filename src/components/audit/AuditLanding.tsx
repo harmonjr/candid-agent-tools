@@ -27,7 +27,7 @@ export default function AuditLanding() {
 
       <Link
         href="/audit"
-        className="mt-10 bg-accent px-8 py-4 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+        className="mt-10 bg-accent px-8 py-4 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
       >
         Start the Audit
       </Link>

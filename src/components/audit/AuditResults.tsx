@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef, useEffect } from 'react';
 import type { AuditResult } from '@/lib/scoring';
 import ScoreDisplay from './ScoreDisplay';
 import ScoreBar from './ScoreBar';
@@ -13,9 +14,24 @@ export default function AuditResults({
   result,
   onRetake,
 }: AuditResultsProps) {
+  const scoreRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      if (!scoreRef.current) return;
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+      scoreRef.current.scrollIntoView({
+        behavior: prefersReducedMotion ? 'instant' : 'smooth',
+        block: 'start',
+      });
+    });
+  }, []);
+
   return (
-    <div className="print:bg-white">
-      <div className="mb-16 text-center">
+    <div>
+      <div ref={scoreRef} className="mb-16 text-center">
         <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
           Your Results
         </span>
@@ -36,7 +52,7 @@ export default function AuditResults({
         />
       </div>
 
-      <div className="mt-16 border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+      <div className="mt-16 border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
         <h3 className="mb-8 font-serif text-2xl font-light text-ink">
           Section Breakdown
         </h3>
@@ -52,7 +68,7 @@ export default function AuditResults({
         </div>
       </div>
 
-      <div className="mt-8 border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+      <div className="mt-8 border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
         <h3 className="mb-6 font-serif text-2xl font-light text-ink">
           What to Do Next
         </h3>
@@ -76,14 +92,14 @@ export default function AuditResults({
         <button
           type="button"
           onClick={() => window.print()}
-          className="border border-border bg-white px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="border border-border bg-cream px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Print / Save Results
         </button>
         <button
           type="button"
           onClick={onRetake}
-          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Retake Assessment
         </button>
@@ -109,7 +125,7 @@ function NextStepsCta() {
         href="https://thecandidagent.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-block bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+        className="mt-4 inline-block bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
       >
         Explore The Candid Agent
       </a>

@@ -23,7 +23,7 @@ export default function QuestionCard({
   };
 
   return (
-    <div className="border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+    <div className="border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
       <div className="mb-6">
         <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
           Question {index + 1}

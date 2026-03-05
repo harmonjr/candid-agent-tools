@@ -54,7 +54,7 @@ export default function EmergencyGuide() {
         </p>
       </div>
 
-      <div className="border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+      <div className="border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
         <h3 className="font-serif text-xl font-light text-ink">
           Genuine Emergencies — Respond Now
         </h3>
@@ -69,7 +69,7 @@ export default function EmergencyGuide() {
         </div>
       </div>
 
-      <div className="mt-6 border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+      <div className="mt-6 border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
         <h3 className="font-serif text-xl font-light text-ink">
           Client Anxiety — Acknowledge, Then Hold
         </h3>

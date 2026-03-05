@@ -43,7 +43,7 @@ export default function MarginCheck({
         </p>
       </div>
 
-      <div className="border-t-2 border-candid bg-white px-6 py-8">
+      <div className="border-t-2 border-candid bg-cream-alt px-6 py-8">
         <label
           htmlFor="monthly-income"
           className="font-sans text-sm font-semibold text-ink"
@@ -65,7 +65,7 @@ export default function MarginCheck({
             value={monthlyIncome || ''}
             onChange={(e) => onIncomeChange(Number(e.target.value))}
             placeholder="8,500"
-            className="w-full border border-border bg-white py-3 pl-8 pr-4 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+            className="w-full border border-border bg-cream py-3 pl-8 pr-4 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           />
         </div>
       </div>
@@ -84,14 +84,14 @@ export default function MarginCheck({
         <button
           type="button"
           onClick={() => window.print()}
-          className="border border-border bg-white px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="border border-border bg-cream px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Print / Save Results
         </button>
         <button
           type="button"
           onClick={onStartOver}
-          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Start Over
         </button>

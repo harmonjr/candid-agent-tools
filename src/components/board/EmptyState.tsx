@@ -74,7 +74,7 @@ export default function EmptyState({
           />
           <button
             type="submit"
-            className="mt-4 w-full bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+            className="mt-4 w-full bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           >
             Set My Capacity
           </button>
@@ -83,7 +83,7 @@ export default function EmptyState({
         <button
           type="button"
           onClick={onAddFirst}
-          className="mt-10 flex items-center gap-2 bg-accent px-8 py-4 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="mt-10 flex items-center gap-2 bg-accent px-8 py-4 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           <UserPlus size={16} />
           Add Your First Client

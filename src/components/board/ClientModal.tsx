@@ -82,7 +82,7 @@ export default function ClientModal({
     <div className="fixed inset-0 z-50 flex items-start justify-center px-4 pt-20">
       <div className="fixed inset-0 bg-ink/40" onClick={onClose} aria-hidden="true" />
 
-      <div className="relative w-full max-w-md border border-border bg-white px-6 py-8">
+      <div className="relative w-full max-w-md border border-border bg-cream px-6 py-8">
         <button
           type="button"
           onClick={onClose}
@@ -150,7 +150,7 @@ export default function ClientModal({
           <div className="flex items-center justify-between pt-2">
             <button
               type="submit"
-              className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+              className="bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
             >
               {isEditing ? 'Save Changes' : 'Add Client'}
             </button>

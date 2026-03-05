@@ -1,35 +1,48 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useRef, useEffect } from 'react';
 import type { Section } from '@/lib/expectations';
 import ScriptCard from './ScriptCard';
 import EducationCallout from './EducationCallout';
 
 interface SectionAccordionProps {
   section: Section;
-  defaultOpen?: boolean;
+  isOpen: boolean;
+  onToggle: () => void;
   customScripts: Record<string, string>;
   onCustomChange: (scriptId: string, text: string | undefined) => void;
 }
 
 export default function SectionAccordion({
   section,
-  defaultOpen = false,
+  isOpen,
+  onToggle,
   customScripts,
   onCustomChange,
 }: SectionAccordionProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const sectionRef = useRef<HTMLElement>(null);
 
-  const toggle = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+  useEffect(() => {
+    if (!isOpen || !sectionRef.current) return;
+
+    requestAnimationFrame(() => {
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)',
+      ).matches;
+
+      sectionRef.current?.scrollIntoView({
+        behavior: prefersReducedMotion ? 'instant' : 'smooth',
+        block: 'start',
+      });
+    });
+  }, [isOpen]);
 
   return (
-    <section className="border-t-2 border-candid">
+    <section ref={sectionRef} className="border-t-2 border-candid">
       <button
         type="button"
-        onClick={toggle}
-        className="flex w-full items-start justify-between gap-4 bg-white px-6 py-6 text-left transition-colors duration-200 hover:bg-highlight/50 focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-8 sm:py-8"
+        onClick={onToggle}
+        className="flex w-full items-start justify-between gap-4 bg-cream px-6 py-6 text-left transition-colors duration-200 hover:bg-highlight/50 focus:outline-hidden focus:ring-2 focus:ring-accent/20 sm:px-8 sm:py-8"
         aria-expanded={isOpen}
       >
         <div>
@@ -53,7 +66,7 @@ export default function SectionAccordion({
       </button>
 
       {isOpen && (
-        <div className="border-t border-border bg-white">
+        <div className="border-t border-border bg-cream">
           <div className="px-6 py-8 sm:px-8">
             <div className="flex flex-col gap-4">
               {section.scripts.map((script) => (

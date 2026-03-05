@@ -1,13 +1,27 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { SECTIONS } from '@/lib/audit-questions';
 import { calculateResults, type Answers, type AuditResult } from '@/lib/scoring';
 import ProgressIndicator from './ProgressIndicator';
 import AuditSection from './AuditSection';
 import AuditResults from './AuditResults';
 
+function scrollToWizard(ref: React.RefObject<HTMLDivElement | null>) {
+  requestAnimationFrame(() => {
+    if (!ref.current) return;
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+    ref.current.scrollIntoView({
+      behavior: prefersReducedMotion ? 'instant' : 'smooth',
+      block: 'start',
+    });
+  });
+}
+
 export default function AuditWizard() {
+  const wizardRef = useRef<HTMLDivElement>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [result, setResult] = useState<AuditResult | null>(null);
@@ -25,18 +39,15 @@ export default function AuditWizard() {
   const handleNext = useCallback(() => {
     if (currentStep < SECTIONS.length - 1) {
       setCurrentStep((prev) => prev + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const auditResult = calculateResults(answers);
       setResult(auditResult);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [currentStep, answers]);
 
   const handleBack = useCallback(() => {
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [currentStep]);
 
@@ -44,7 +55,7 @@ export default function AuditWizard() {
     setAnswers({});
     setCurrentStep(0);
     setResult(null);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToWizard(wizardRef);
   }, []);
 
   if (isShowingResults) {
@@ -52,7 +63,7 @@ export default function AuditWizard() {
   }
 
   return (
-    <div>
+    <div ref={wizardRef}>
       <ProgressIndicator
         currentStep={currentStep}
         totalSteps={SECTIONS.length}

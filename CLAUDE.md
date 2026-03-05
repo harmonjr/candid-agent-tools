@@ -3,7 +3,8 @@
 Agent-facing platform for The Candid Agent ecosystem. Lives at `agents.thecandidagent.com`.
 
 ## Tech Stack
-- **Framework:** Next.js 15 (App Router, TypeScript)
+- **Framework:** Next.js 16 (App Router, TypeScript)
+- **Timezone:** America/New_York
 - **Styling:** Tailwind CSS v4
 - **Deployment:** Vercel (subdomain of thecandidagent.com)
 

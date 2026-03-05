@@ -32,13 +32,7 @@ export default function TemplatesLanding() {
       {!selectedCategory && (
         <>
           <div className="text-center">
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
-              Content Templates
-            </span>
-            <h1 className="mt-4 font-serif text-4xl font-light leading-tight text-ink sm:text-5xl">
-              Write content that builds trust
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-ink-muted sm:text-lg">
+            <p className="mx-auto max-w-2xl font-sans text-base leading-relaxed text-ink-muted sm:text-lg">
               {totalTemplates} pre-structured templates designed around The Candid
               Agent's principles. Copy them, customize them for your market, and
               publish content that educates instead of sells.

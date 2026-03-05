@@ -48,7 +48,7 @@ export default function CapacitySettings({
         aria-hidden="true"
       />
 
-      <div className="relative w-full max-w-sm border border-border bg-white px-6 py-8">
+      <div className="relative w-full max-w-sm border border-border bg-cream px-6 py-8">
         <button
           type="button"
           onClick={onClose}
@@ -86,7 +86,7 @@ export default function CapacitySettings({
 
           <button
             type="submit"
-            className="mt-5 w-full bg-accent px-6 py-3 font-sans text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+            className="mt-5 w-full bg-accent px-6 py-3 font-sans text-sm font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           >
             Save Capacity
           </button>

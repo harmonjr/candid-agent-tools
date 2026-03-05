@@ -58,7 +58,7 @@ export default function TemplateDisplay({
         <button
           type="button"
           onClick={onBack}
-          className="border border-border bg-white px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="border border-border bg-cream px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Back to Schedule
         </button>

@@ -7,7 +7,7 @@ interface MathBreakdownProps {
 
 export default function MathBreakdown({ result }: MathBreakdownProps) {
   return (
-    <div className="border-t-2 border-candid bg-white px-6 py-8 sm:px-8">
+    <div className="border-t-2 border-candid bg-cream-alt px-6 py-8 sm:px-8">
       <h3 className="mb-8 font-serif text-2xl font-light text-ink">
         The Math
       </h3>

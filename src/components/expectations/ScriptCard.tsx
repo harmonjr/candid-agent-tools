@@ -139,7 +139,7 @@ function ScriptHeader({
           onClick={onCopy}
           className={`px-3 py-1 font-sans text-[11px] font-semibold transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-accent/20 ${
             copied
-              ? 'bg-zone-green text-white'
+              ? 'bg-zone-green text-cream'
               : 'border border-border text-ink-muted hover:border-accent hover:text-accent'
           }`}
         >

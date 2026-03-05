@@ -36,24 +36,24 @@ export default function MarginResult({
 }: MarginResultProps) {
   return (
     <div className="mt-6 space-y-6">
-      <div className="bg-white px-6 py-8 text-center">
-        <p className="font-sans text-sm text-ink-muted">
+      <div className="bg-ink px-6 py-12 text-center">
+        <p className="font-sans text-sm text-cream/60">
           After this payment, what is left?
         </p>
-        <p className="mt-2 font-serif text-4xl font-light text-ink sm:text-5xl">
+        <p className="mt-3 font-serif text-5xl font-light text-cream sm:text-6xl">
           {formatDollars(Math.round(remaining))}
         </p>
-        <p className="mt-2 font-sans text-xs text-ink-muted">
+        <p className="mt-3 font-sans text-xs text-cream/40">
           per month for everything else in your life
         </p>
       </div>
 
-      <div className="bg-white px-6 py-6">
+      <div className="bg-cream-alt px-6 py-6">
         <div className="flex items-center justify-between">
           <span className="font-sans text-sm text-ink-muted">
             Housing-to-income ratio
           </span>
-          <span className="font-sans text-lg font-semibold text-ink">
+          <span className="font-serif text-2xl font-light text-ink">
             {formatPercent(ratio)}
           </span>
         </div>
@@ -95,7 +95,7 @@ function RatioBar({ ratio }: { ratio: number }) {
         : 'bg-zone-red';
 
   return (
-    <div className="relative mt-3 h-3 w-full bg-cream-alt">
+    <div className="relative mt-3 h-3 w-full bg-cream">
       <div
         className={`absolute left-0 top-0 h-full transition-all duration-500 ease-out ${barColor}`}
         style={{ width: `${barPercent}%` }}
@@ -123,7 +123,7 @@ function IncomeComparison({
   const marginTarget = monthlyIncome * 0.28;
 
   return (
-    <div className="bg-white px-6 py-6">
+    <div className="bg-cream-alt px-6 py-6">
       <div className="flex items-center justify-between border-b border-border pb-3">
         <span className="font-sans text-sm text-ink-muted">
           What the bank says you can afford

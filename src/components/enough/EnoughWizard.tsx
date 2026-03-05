@@ -93,7 +93,7 @@ export default function EnoughWizard() {
           <button
             type="button"
             onClick={handleBack}
-            className="border border-border bg-white px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+            className="border border-border bg-cream px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors duration-200 hover:border-accent hover:text-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
           >
             Back
           </button>
@@ -109,7 +109,7 @@ export default function EnoughWizard() {
             px-8 py-3 font-sans text-sm font-semibold transition-colors duration-200
             focus:outline-hidden focus:ring-2 focus:ring-accent/20
             ${canContinue
-              ? 'bg-accent text-white hover:bg-accent-hover'
+              ? 'bg-accent text-cream hover:bg-accent-hover'
               : 'cursor-not-allowed bg-border text-ink-muted'
             }
           `}

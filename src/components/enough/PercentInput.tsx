@@ -69,7 +69,7 @@ export default function PercentInput({
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="0"
-          className="w-full border border-border bg-white py-3 pl-4 pr-10 font-sans text-base text-ink transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="w-full border border-border bg-cream py-3 pl-4 pr-10 font-sans text-base text-ink transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         />
         <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 font-sans text-base text-ink-muted">
           %

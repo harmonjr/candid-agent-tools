@@ -10,7 +10,7 @@ interface ScenarioCardProps {
 
 export default function ScenarioCard({ scenario }: ScenarioCardProps) {
   return (
-    <div className="border-t border-border bg-white">
+    <div className="border-t border-border bg-cream">
       <div className="px-6 py-8 sm:px-8">
         <h3 className="font-serif text-xl font-light leading-snug text-ink sm:text-2xl">
           {`\u201C${scenario.title}\u201D`}

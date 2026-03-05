@@ -8,6 +8,9 @@ import {
 import SectionAccordion from './SectionAccordion';
 
 export default function ExpectationsLanding() {
+  const [openSectionId, setOpenSectionId] = useState<string | null>(
+    EXPECTATION_SECTIONS[0].id,
+  );
   const [customScripts, setCustomScripts] = useState<Record<string, string>>(
     {},
   );
@@ -33,16 +36,8 @@ export default function ExpectationsLanding() {
 
   return (
     <div>
-      <div className="flex flex-col items-center px-6 py-20 text-center sm:py-28">
-        <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
-          First Meeting Guide
-        </span>
-
-        <h1 className="mt-4 max-w-2xl font-serif text-4xl font-light leading-tight text-ink sm:text-5xl lg:text-6xl">
-          The Client Expectation Setter
-        </h1>
-
-        <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-ink-muted sm:text-lg">
+      <div className="flex flex-col items-center px-6 py-16 text-center sm:py-20">
+        <p className="max-w-xl font-sans text-base leading-relaxed text-ink-muted sm:text-lg">
           The first meeting sets the tone for everything. These scripts help you
           establish trust, communicate boundaries, and start the relationship the
           way Bob did &mdash; with the client&apos;s life, not the listing sheet.
@@ -56,11 +51,16 @@ export default function ExpectationsLanding() {
 
       <div className="mx-auto max-w-3xl px-6 pb-24">
         <div className="flex flex-col gap-8">
-          {EXPECTATION_SECTIONS.map((section, index) => (
+          {EXPECTATION_SECTIONS.map((section) => (
             <SectionAccordion
               key={section.id}
               section={section}
-              defaultOpen={index === 0}
+              isOpen={openSectionId === section.id}
+              onToggle={() =>
+                setOpenSectionId((prev) =>
+                  prev === section.id ? null : section.id,
+                )
+              }
               customScripts={customScripts}
               onCustomChange={handleCustomChange}
             />

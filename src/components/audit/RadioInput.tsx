@@ -25,11 +25,11 @@ export default function RadioInput({
           <label
             key={option.value}
             className={`
-              flex cursor-pointer items-start gap-4 rounded-none border px-5 py-4
+              flex cursor-pointer items-start gap-4 border px-5 py-4
               font-sans text-sm leading-relaxed transition-colors duration-200
               ${isSelected
                 ? 'border-candid bg-highlight text-ink'
-                : 'border-border bg-white text-ink-muted hover:border-accent hover:text-ink'
+                : 'border-border bg-cream text-ink-muted hover:border-accent hover:text-ink'
               }
               focus-within:ring-2 focus-within:ring-accent/20
             `}

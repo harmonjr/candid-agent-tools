@@ -39,14 +39,14 @@ export default function ScriptEditArea({
           e.target.style.height = 'auto';
           e.target.style.height = `${e.target.scrollHeight}px`;
         }}
-        className="w-full resize-none border border-border bg-white px-4 py-3 font-serif text-base leading-relaxed text-ink transition-colors duration-200 focus:border-candid focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+        className="w-full resize-none border border-border bg-cream px-4 py-3 font-serif text-base leading-relaxed text-ink transition-colors duration-200 focus:border-candid focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         rows={4}
       />
       <div className="mt-2 flex items-center gap-2">
         <button
           type="button"
           onClick={onSave}
-          className="bg-accent px-4 py-1.5 font-sans text-[11px] font-semibold text-white transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="bg-accent px-4 py-1.5 font-sans text-[11px] font-semibold text-cream transition-colors duration-200 hover:bg-accent-hover focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         >
           Save
         </button>

@@ -49,7 +49,7 @@ export default function ContentTemplateCard({ template }: ContentTemplateCardPro
   const previewLines = template.content.split('\n').slice(0, 4).join('\n');
 
   return (
-    <div className="border-t border-border bg-white">
+    <div className="border-t border-border bg-cream">
       <div className="px-6 py-5">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0">

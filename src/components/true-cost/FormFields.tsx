@@ -43,7 +43,7 @@ export function CurrencyField({
           value={value || ''}
           onChange={(e) => onChange(Number(e.target.value))}
           placeholder={placeholder}
-          className="w-full border border-border bg-white py-3 pl-8 pr-4 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="w-full border border-border bg-cream py-3 pl-8 pr-4 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         />
       </div>
       {annualToMonthly && value > 0 && (
@@ -92,7 +92,7 @@ export function PercentField({
           value={value || ''}
           onChange={(e) => onChange(Number(e.target.value))}
           placeholder={placeholder}
-          className="w-full border border-border bg-white px-4 py-3 pr-10 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
+          className="w-full border border-border bg-cream px-4 py-3 pr-10 font-sans text-base text-ink transition-colors duration-200 focus:border-accent focus:outline-hidden focus:ring-2 focus:ring-accent/20"
         />
         <span className="absolute right-4 top-1/2 -translate-y-1/2 font-sans text-sm text-ink-muted">
           %
@@ -124,8 +124,8 @@ export function LoanTermToggle({ value, onChange }: LoanTermToggleProps) {
           onClick={() => onChange(30)}
           className={`flex-1 py-3 font-sans text-sm font-semibold transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-accent/20 ${
             value === 30
-              ? 'bg-accent text-white'
-              : 'border border-border bg-white text-ink hover:border-accent hover:text-accent'
+              ? 'bg-accent text-cream'
+              : 'border border-border bg-cream text-ink hover:border-accent hover:text-accent'
           }`}
         >
           30 Years
@@ -135,8 +135,8 @@ export function LoanTermToggle({ value, onChange }: LoanTermToggleProps) {
           onClick={() => onChange(15)}
           className={`flex-1 py-3 font-sans text-sm font-semibold transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-accent/20 ${
             value === 15
-              ? 'bg-accent text-white'
-              : 'border border-border bg-white text-ink hover:border-accent hover:text-accent'
+              ? 'bg-accent text-cream'
+              : 'border border-border bg-cream text-ink hover:border-accent hover:text-accent'
           }`}
         >
           15 Years

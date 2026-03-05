@@ -45,7 +45,7 @@ export default function CostBreakdown({ result }: CostBreakdownProps) {
   const items = buildLineItems(result);
 
   return (
-    <div className="border-t-2 border-candid bg-white px-6 py-8">
+    <div className="border-t-2 border-candid bg-cream-alt px-6 py-8">
       <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-candid">
         Itemized Breakdown
       </h3>

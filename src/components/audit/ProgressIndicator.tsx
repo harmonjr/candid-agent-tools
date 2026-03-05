@@ -22,9 +22,9 @@ export default function ProgressIndicator({
             <div key={name} className="flex items-center gap-2">
               <div
                 className={`
-                  flex h-8 w-8 items-center justify-center rounded-none
+                  flex h-8 w-8 items-center justify-center
                   font-sans text-sm font-semibold transition-colors duration-200
-                  ${isComplete ? 'bg-candid text-white' : ''}
+                  ${isComplete ? 'bg-candid text-cream' : ''}
                   ${isActive ? 'border-2 border-candid text-candid' : ''}
                   ${!isActive && !isComplete ? 'border-2 border-border text-ink-muted' : ''}
                 `}

@@ -33,7 +33,7 @@ export default function CategoryCard({ category, isSelected, onSelect }: Categor
       className={`w-full border-t-2 px-6 py-6 text-left transition-colors duration-200 focus:outline-hidden focus:ring-2 focus:ring-accent/20 ${
         isSelected
           ? 'border-candid bg-highlight'
-          : 'border-candid bg-white hover:bg-highlight'
+          : 'border-candid bg-cream hover:bg-highlight'
       }`}
     >
       <div className="flex items-start gap-4">

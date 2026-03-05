@@ -4,6 +4,7 @@
   /* Typography */
   --font-serif: "Newsreader", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: var(--font-serif);
 
   /* Brand Colors */
   --color-cream: #FDFBF7;
@@ -67,15 +68,19 @@ body {
 }
 
 .slider-candid:focus {
-  outline: none;
+  outline: 2px solid transparent;
 }
 
 .slider-candid:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.2);
 }
 
+.slider-candid:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px rgba(139, 90, 43, 0.2);
+}
+
 /* Print styles for results */
 @media print {
-  body { background: white !important; }
+  body { background: var(--color-cream) !important; }
   header, footer, button { display: none !important; }
 }

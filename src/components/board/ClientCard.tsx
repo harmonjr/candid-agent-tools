@@ -28,7 +28,7 @@ export default function ClientCard({ client, onEdit }: ClientCardProps) {
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
-      className="group cursor-grab border border-border bg-white px-4 py-3 transition-colors duration-200 hover:border-candid/30 active:cursor-grabbing"
+      className="group cursor-grab border border-border bg-cream px-4 py-3 transition-colors duration-200 hover:border-candid/30 active:cursor-grabbing"
     >
       <div className="flex items-start justify-between gap-2">
         <button
