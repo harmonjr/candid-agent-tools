@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import type { Question } from '@/lib/audit-questions';
 
 interface SliderInputProps {
@@ -18,12 +17,6 @@ export default function SliderInput({
   const max = question.max ?? 100;
   const step = question.step ?? 1;
   const current = value ?? Math.round((min + max) / 2);
-
-  useEffect(() => {
-    if (value === undefined) {
-      onChange(current);
-    }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="space-y-4">
