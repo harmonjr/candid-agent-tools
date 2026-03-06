@@ -7,7 +7,7 @@ export const OPENING_SECTION: Section = {
   description:
     'Asking about a client\u2019s life before ever discussing properties. This is where trust begins \u2014 not with a listing sheet, but with genuine curiosity.',
   educationCallout:
-    'Bob didn\u2019t win Randy\u2019s business by being available 24/7. He won it by spending an hour asking about their life before showing a single listing. The agents who ask the best questions attract the best clients.',
+    'Bob didn\u2019t win his client\u2019s trust by being available 24/7. He won it by spending an hour asking about his life before showing a single listing. The agents who ask the best questions attract the best clients.',
   scripts: [
     {
       id: 'life-question',

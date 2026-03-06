@@ -5,7 +5,7 @@ export const DISCOVERY_CATEGORY: Category = {
   title: 'The Discovery Conversation',
   subtitle: 'The Bob Method',
   description:
-    'Bob spent an hour asking about Randy\'s life before showing a single listing. He asked about family, goals, fears, and dreams. Then he pulled out an adding machine tape and showed what different price points would mean for their monthly life. That is the Bob Method -- putting the person before the property.',
+    'Bob spent an hour asking about his client\'s life before showing a single listing. He asked about goals, fears, and dreams. Then he pulled out a printing calculator and showed what different price points would mean for his monthly life. That is the Bob Method -- putting the person before the property.',
   scenarios: [
     {
       id: 'life-first',

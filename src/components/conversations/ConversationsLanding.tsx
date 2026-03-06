@@ -13,10 +13,11 @@ export default function ConversationsLanding() {
     <div>
       <div className="flex flex-col items-center px-6 py-16 text-center sm:py-20">
         <p className="max-w-xl font-sans text-base leading-relaxed text-ink-muted sm:text-lg">
-          Bob spent an hour asking about a family&apos;s life before ever
-          showing a listing. He pulled out an adding machine tape and showed
-          what different price points would mean for their monthly budget.
-          He steered them toward spending less than they qualified for.
+          Bob spent an hour asking about his client&apos;s life before ever
+          showing a listing. He pulled out a printing calculator and showed
+          what different price points would mean for his monthly budget.
+          He showed him what spending less than he qualified for could mean
+          for his life.
         </p>
 
         <p className="mt-4 max-w-lg font-sans text-sm leading-relaxed text-ink-muted">

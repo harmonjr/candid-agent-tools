@@ -5,11 +5,11 @@ export const BUDGET_CATEGORY: Category = {
   title: 'The Budget Conversation',
   subtitle: 'Spend less than you qualify for',
   description:
-    'Bob pulled out an adding machine tape and showed the family what different price points meant for their monthly life. He was not selling a house -- he was protecting a family. This is the conversation where agents become advisors.',
+    'Bob pulled out a printing calculator and showed his client what different price points meant for his monthly life. He was not selling a house -- he was protecting his client\u2019s future. This is the conversation where agents become advisors.',
   scenarios: [
     {
       id: 'adding-machine',
-      title: 'The adding machine tape moment',
+      title: 'The printing calculator moment',
       context:
         'You are sitting with clients who know their pre-approval amount. This is the moment to show -- not tell -- what different price points mean in real monthly terms.',
       scripts: [
